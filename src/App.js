@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import React, { useState, useEffect } from "react";
+import GlobalNav from "./components/GlobalNav";
+import ItemComponent from "./components/itemComponent";
 
-function App() {
+function App({
+  data,
+  addToCart,
+  removeFromCart,
+  increaseAmount,
+  decreaseAmount,
+  cartData,
+  cartAmount,
+  handleCartCount,
+}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalNav cartAmount={cartAmount} />
+      <div className="container-fluid">
+        <div className="row">
+          {data.map((i) => {
+            return (
+              <ItemComponent
+                key={i.id}
+                id={i.id}
+                name={i.name}
+                desc={i.desc}
+                src={i.src}
+                cost={i.cost}
+                amount={i.amount}
+                increaseAmount={increaseAmount}
+                decreaseAmount={decreaseAmount}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+                cartData={cartData}
+                handleCartCount={handleCartCount}
+              />
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

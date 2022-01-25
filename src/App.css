@@ -1,38 +1,109 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cart {
+  text-align: center;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cart img{
+  width: 100%;
+  height: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.cartItemsCont{
+  max-width: 1200px;
+  margin: auto;
+  border: 1px solid;
+  
+}
+
+.cartItem{
+  padding: 10px;
+  border: 1px solid;
+}
+
+.cartButtonsCont{
+  display: flex;
+}
+
+.cartItem button{
+  padding: 10px;
+}
+
+  .body {
+  height: 100vh;
+}
+
+body {
+  background-color: white;
+}
+
+.navBar {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  position: sticky;
+  top: 0px;
+  background-color: whitesmoke;
+}
+
+nav {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+}
+
+.itemComponent {
+  border: 1px solid;
+  margin: 5px;
+  padding: 10px;
+}
+.itemComponent img {
+  width: 100%;
+  height: auto;
+}
+
+.buttonsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.buttonsContainer button {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.buttonsContainer > div {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.buttonsContainer > div > button,
+span {
+  flex: 1;
+}
+
+.cartItem {
+  display: flex;
+}
+
+.cartAmount{
+  display: inline-block;
+  padding: 10px 17px;
+  margin-left: 10px;
+  border-radius: 50%;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: #424242;
 }
